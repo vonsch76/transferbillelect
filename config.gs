@@ -4,7 +4,7 @@ function downloadconfig() {
         'parentFolderId'  : '',                                            //folder to move the files to, can be empty
         'refssid'         : '',                                           //ssid of the reference google sheet
         'ssname'          : 'utalasok_' + tperiod(true),                  //base filename for the spreadsheet and electra text file
-        'startday'        : tperiod(true),                                //fists day of the current week
+        'startday'        : tperiod(true),                                //first day of the current week
         'endday'          : tperiod(false, 6),                            //offset to first day, week starts at 0, so 6 is already one week
         'shiftweekend'    : true,
         'sendaccount'     : '',                                           //account originating the transfer, 24 numbers
