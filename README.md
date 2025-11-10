@@ -2,7 +2,7 @@ Transfer accounts payable from Billingo.hu-s Spendings to Electra, using Billing
 
 Ezzel a Google Apps Scripttel a heti fizetendő számláiadat félautomatikusan átrakhatod Electra forintátutalás formátumba, így beavatkozás nélkül a fizetendő összegek, számlaszámok stimmelni fognak.
 Előfeltételek: Billingo.hu API, Electra hozzáférés, referencia Google Sheet
-Hátrány: félautomata, első lépésben előállítja az utalásokról a Google Sheetet, amely szerkeszthető, majd második lépéseben elkészül a TXT fájl, amely letölthető és Electra rendszerbe forintátutalásként feltölthető.
+Hátrány: Félautomata, első lépésben előállítja az utalásokról a Google Sheetet, amely szerkeszthető, majd második lépéseben elkészül a TXT fájl, amely letölthető és Electra rendszerbe forintátutalásként feltölthető. Az ékezeteket Electra rendszerbe átmásoláskor megszünteti.
 
 Telepítés:
 1. Készíts egy új Google Apps Sciptet.
@@ -31,3 +31,5 @@ Használat:
 2. Válaszd a code.gs-t és futtast a 'get_weeklytransfers'-t. Erre elkészül a Google Apps Sheet file, amit vagy a Drive recent menüjére kattintva vagy a link új ablak/tab-ba másolásával érhetsz el. A fájl formátuma: A - fizetendő összeg, B - fizetés időpontja, C - Billingo partnerszám, D - partner neve, E - partner országkódja, F - megjegyzés.
 3. Nyisd meg és szerkeszd a fájlt, új tételeket is hozzáadhatsz, kötelező mezők: összeg, időpont, név. A formátumnál vedd figyelembe a fájlban szereplő formátumot.
 4. Ha minden megfelelő futtasd a 'convert_weeklytransfer'-t, majd töltsd fel a bankba. Átutalás előtt ellenőrizd az adatokat még egyszer.
+
+A partner keresése első körben a Billingo által megadott ügyfélkódok között (referencia táblázat A oszlop), második körben a nevek között történik. Ha egynél több találat van, akkor az Electra TXT fájlba nem kerül be.
