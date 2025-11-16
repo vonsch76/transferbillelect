@@ -29,7 +29,7 @@ A referencia Google Sheet file felépítése
 Használat:
 1. Nyisd meg a Google Apps Scriptet és válaszd ki a projektet.
 2. Válaszd a code.gs-t és futtast a 'get_weeklytransfers'-t. Erre elkészül a Google Apps Sheet file, amit vagy a Drive recent menüjére kattintva vagy a link új ablak/tab-ba másolásával érhetsz el. A fájl formátuma: A - fizetendő összeg, B - fizetés időpontja, C - Billingo partnerszám, D - partner neve, E - partner országkódja, F - megjegyzés.
-3. Nyisd meg és szerkeszd a fájlt, új tételeket is hozzáadhatsz, kötelező mezők: összeg, időpont, név. A formátumnál vedd figyelembe a fájlban szereplő formátumot.
+3. Nyisd meg és szerkeszd a fájlt, új tételeket is hozzáadhatsz, kötelező mezők: összeg, időpont, név. A formátumnál vedd figyelembe a fájlban szereplő formátumot. Electra formátuma bankonként eltérő lehet, ez a Raiffeisen által használt.
 4. Ha minden megfelelő futtasd a 'convert_weeklytransfer'-t, majd töltsd fel a bankba. Átutalás előtt ellenőrizd az adatokat még egyszer.
 
 A partner keresése első körben a Billingo által megadott ügyfélkódok között (referencia táblázat A oszlop), második körben a nevek között történik. Ha egynél több találat van, akkor az Electra TXT fájlba nem kerül be.
